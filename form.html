@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body { background-color: #000; color: #fff; font-family: Arial, sans-serif; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 1rem; }
+        .form { display: flex; align-items: center; gap: 1rem; background-color: #111; padding: 1rem; border-radius: 5px; }
+        .form div { position: relative; flex: 1; text-align: center; }
+        .form input, .form select { width: 100%; padding: 0.5rem; color: #fff; background-color: #000; border: 1px solid #444; text-align: center; }
+        .form button { background-color: orange; color: #fff; padding: 0.5rem 1rem; border: none; cursor: pointer; }
+        .form i { margin-right: 0.5rem; }
+        .form span { display: block; color: #888; font-size: 0.8rem; margin-bottom: 0.2rem; }
+        .form input::placeholder { color: #888; }
+        .form select { appearance: none; -webkit-appearance: none; -moz-appearance: none; }
+    </style>
+       <!-- <style>
+        .search-bar {
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      text-align: center;
+      background-color: #000;
+      
+  }
+  form#booking-form {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+  }
+  .form-group {
+      text-align: left;
+      width: 20%;
+  }
+  .form-btn{
+  width: 20%;
+  }
+  .search-bar h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+  }
+  
+  
+  .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+      color: #fff;
+      font-size: 16px;
+  }
+  
+  .form-group input {
+      width: calc(100% - 20px);
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      height: 45px;
+  }
+  
+  .form-btn button {
+    background-color: #ff7000;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      height: 45px;
+      font-size: 18px;
+      transition: all 0.3s linear;
+  }
+  
+  .form-btn button:hover {
+      background-color: #024db6;
+  }
+      </style> -->
+</head>
+<body>
+    <div class="container">
+        <form id="searchForm" action="https://www.privateupgrades.com/search" method="get" class="form">
+            <div>
+                <span>Where are you heading to?</span>
+                <i class="fas fa-search"></i>
+                <input type="text" id="location" name="location_autocomplete" placeholder="Destination or Hotel name" autocomplete="off" required>
+            </div>
+            <div>
+                <span>Check in</span>
+                <i class="fas fa-calendar"></i>
+                <input type="date" id="checkIn" name="date_check_in" value="2024-06-19" required>
+            </div>
+            <div>
+                <span>Check out</span>
+                <i class="fas fa-long-arrow-alt-right"></i>
+                <input type="date" id="checkOut" name="date_check_out" value="2024-06-20" required>
+            </div>
+            <div>
+                <span>Nights</span>
+                <i class="fas fa-moon"></i>
+                <input type="text" id="nights" name="nights" placeholder="Nights" value="1" readonly>
+            </div>
+            <div>
+                <span>Adults</span>
+                <i class="fas fa-user"></i>
+                <select id="adults" name="adults">
+                    <option value="1">1</option>
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+            <div>
+                <button type="submit">SEARCH</button>
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <div class="search-bar">
+        <div class="container">
+          <form id="booking-form">
+              <div class="form-group">
+                  <label for="destination">Destination</label>
+                  <input type="text" id="destination" placeholder="Destination or Hotel name" name="destination" required>
+              </div>
+              <div class="form-group">
+                  <label for="checkin">Check-in</label>
+                  <input type="date" id="checkin" name="checkin" required>
+              </div>
+              <div class="form-group">
+                  <label for="checkout">Check-out</label>
+                  <input type="date" id="checkout" name="checkout" required>
+              </div>
+              <div class="form-group">
+                  <label for="guests">Guests</label>
+                  <input type="number" id="guests" name="guests" min="1" required>
+              </div>
+              <div class="form-btn">
+              <button type="submit">Search</button>
+              </div>
+          </form>
+        </div>
+  </div>
+
+
+
+    <script>
+        function calculateNights() {
+            const checkInDate = new Date(document.getElementById('checkIn').value);
+            const checkOutDate = new Date(document.getElementById('checkOut').value);
+            const timeDifference = checkOutDate - checkInDate;
+            const daysDifference = timeDifference / (1000 * 3600 * 24);
+            
+            if (!isNaN(daysDifference) && daysDifference > 0) {
+                document.getElementById('nights').value = daysDifference;
+            } else {
+                document.getElementById('nights').value = '';
+            }
+        }
+
+        document.getElementById('checkIn').addEventListener('change', calculateNights);
+        document.getElementById('checkOut').addEventListener('change', calculateNights);
+
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            var location = document.getElementById('location').value;
+            var checkIn = document.getElementById('checkIn').value;
+            var checkOut = document.getElementById('checkOut').value;
+            var nights = document.getElementById('nights').value;
+
+            if (!location) {
+                alert('Please enter a destination or hotel name.');
+                event.preventDefault();
+            } else if (!checkIn || !checkOut || !nights) {
+                alert('Please select valid check-in and check-out dates.');
+                event.preventDefault();
+            }
+        });
+    </script>
+     <script>
+        // document.getElementById('booking-form').addEventListener('submit', function(event) {
+        //   event.preventDefault();
+          
+        //   const destination = document.getElementById('destination').value;
+        //   const checkin = document.getElementById('checkin').value;
+        //   const checkout = document.getElementById('checkout').value;
+        //   const guests = document.getElementById('guests').value;
+      
+        //   console.log(`Destination: ${destination}`);
+        //   console.log(`Check-in: ${checkin}`);
+        //   console.log(`Check-out: ${checkout}`);
+        //   console.log(`Guests: ${guests}`);
+      
+          // Add your search functionality here
+    //       alert(`Searching for hotels in ${destination} from ${checkin} to ${checkout} for ${guests} guests.`);
+    //   });
+       </script>
+</body>
+</html>
