@@ -26,14 +26,7 @@ $(window).scroll(function(){
     }
 });
 
-     $('.moreless-button').click(function() {
-  $('.moretext').slideToggle();
-  if ($('.moreless-button').text() == "Διάβασε περισσότερο") {
-    $(this).text("Διαβάστε Λιγότερα")
-  } else {
-    $(this).text("Διάβασε περισσότερο")
-  }
-});
+    
 
 
 AOS.init({

@@ -86,11 +86,11 @@ img {
 /* header css start  */
 
 .main-nav ul li a {
-    font-size: 16px;
+    font-size: 1.33rem;
     color: #333;
     transition: all 0.3s linear;
 }
-.main-nav ul li a:hover{
+.main-nav ul li a:hover, .main-nav ul li a.active{
     color: #ff7000;
 }
 .main-nav ul {
@@ -110,7 +110,9 @@ nav {
     justify-content: space-between;
     padding: 20px 0;
 }
-
+.toggle, .close{
+    display: none;
+}
 /* header css end  */
 
 /* search bar css start */
@@ -121,7 +123,7 @@ nav {
 }
 .form-group label {
     display: block;
-    font-size: 12px;
+    font-size: 1rem;
     color: #d7d7d7;
 }
 .form-group input {
@@ -137,7 +139,7 @@ nav {
 }
 .search-btn button{
     height: 70px;
-    font-size: 14px;
+    font-size: 1.16rem;
     background-color: #ff7000;
     color: #fff;
     border: none;
@@ -192,7 +194,7 @@ input[type="date"], #adults {
     position: absolute;
     left: 10px;
     color: #ffffff;
-    font-size: 15;
+    font-size: 1.25rem;
   }
   #check-out[type="date"]:before {
     content: "\f30b";
@@ -228,19 +230,19 @@ input[type="date"], #adults {
     max-width: 450px;
 }
 .banner-text h1 {
-    font-size: 40px;
+    font-size: 3.33rem;
     font-weight: 600;
     line-height: 1.1;
     margin-bottom: 20px;
 }
 .banner-text p{
-    font-size: 18px;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 /* banner section css end */
 /* top section start here */
 .top-text p {
-    font-size: 18px;
+    font-size: 1.5rem;
     text-align: center;
 }
 .top-wrap {
@@ -253,7 +255,7 @@ input[type="date"], #adults {
     margin-top: 30px;
 }
 .top-listing ul li {
-    font-size: 16px;
+    font-size: 1.33rem;
     padding: 5px 0;
 }
 /* top section end here */
@@ -281,7 +283,7 @@ input[type="date"], #adults {
     opacity: 0.4;
 }
 .main-text h3{
-    font-size: 30px;
+    font-size: 2.5rem;
     font-weight: 600;
     color: #fff;
     margin-bottom: 0;
@@ -367,16 +369,17 @@ input[type="date"], #adults {
 
 
 .luxury-txt h3 {
-    font-size: 28px;
+    font-size: 2.33rem;
     margin-bottom: 15px;
     font-weight: 700;
     color: #024db6;
 }
 .luxury-txt p {
-    font-size: 16px;
+    font-size: 1.33rem;
 }
+
 .view-more a {
-    font-size: 16px;
+    font-size: 1.33rem;
     padding: 15px 40px;
     background-color: #024db6;
     color: #fff;
@@ -388,17 +391,56 @@ input[type="date"], #adults {
     background-color: #ff7000;
 }
 .bottom-text p {
-    font-size: 16px;
+    font-size: 1.33rem;
     text-align: center;
 }
+.offers-txt p {
+    margin-bottom: 0px;
+}
+.offers-txt ul li {
+    font-size: 1.33rem;
+    margin: 3px 0;
+}
+.offers-txt ul{
+    margin: 10px 0;
+    padding-left: 20px;
+    list-style: disc;
+}
+.offers-txt p em{
+font-weight: 600;
+}
 /* sub pages css end */
+/* contact us page css start  */
+.top-text h2 {
+    font-size: 2.91rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px 0;
+}
+.contact-img {
+    height: 100%;
+}
+.contact-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.contact-wrap p {
+    font-size: 1.33rem;
+    margin-bottom: 2px;
+}
+.contact-wrap{
+    margin:10px 0;
+}
+.contact-wrap a{
+    font-weight: 700;
+    font-size: 1.33rem;
+    color: #000;
+    text-decoration: underline;
+}
 
 
-
-
-
-
-
+/* contact us page css end */
 
 
 
@@ -422,7 +464,7 @@ input[type="date"], #adults {
     margin-bottom: 30px;
 }
 .social-links ul li a {
-    font-size: 20px;
+    font-size: 1.66rem;
     height: 50px;
     width: 50px;
     background-color: #024db6;
@@ -445,12 +487,12 @@ input[type="date"], #adults {
         padding-inline-end: 20px;
     }
     .footer-heading h3 {
-        font-size: 28px;
+        font-size: 2.33rem;
         margin-bottom: 15px;
         color: #024db6;
     }
     .footer-links ul li a {
-        font-size: 16px;
+        font-size: 1.33rem;
         color: #000;
         transition: all 0.3s linear;
 }
@@ -463,10 +505,10 @@ input[type="date"], #adults {
 
     }
     .copy-right p{
-        font-size: 20px;
+        font-size: 1.66rem;
     }
     .copy-right p {
-        font-size: 16px;
+        font-size: 1.33rem;
         text-align: center;
         color: #aaa;
         margin-bottom: 0;
