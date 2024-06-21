@@ -137,6 +137,9 @@
 }
 
 @media(max-width:575px){
+    .main-nav {
+        width: 100%;
+    }
     .contact-img {
         height: 350px;
     }
