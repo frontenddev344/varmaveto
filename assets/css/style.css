@@ -341,10 +341,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     height: 100%;
     position: relative;
 }
-
+.main-box a{
+    position: relative;
+    overflow: hidden;
+}
 /* Circle */
 
-.main-box::after,
+.main-box a::after,
 .luxury-img::after {
     position: absolute;
     top: 50%;
@@ -360,7 +363,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     opacity: 0;
 }
 
-.main-box:hover::after,
+.main-box a:hover::after,
 .luxury-img:hover::after {
     animation: circle 1.2s;
     -webkit-animation: circle 1.2s;
