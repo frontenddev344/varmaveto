@@ -127,12 +127,19 @@
     }
     .footer-wrap {
         margin: 15px 0;
+        text-align: center;
     }
     .contact-img {
         height: 400px;
     }
     .copy-right {
         margin-top: 15px;
+    }
+    .footer-logo {
+        text-align: center;
+    }
+    .social-links ul {
+        justify-content: center;
     }
 }
 
