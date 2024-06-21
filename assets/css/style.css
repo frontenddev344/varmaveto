@@ -441,8 +441,18 @@ font-weight: 600;
     color: #000;
     text-decoration: underline;
 }
-
-
+.privacy-wrap{
+    margin-bottom: 30px;
+}
+.privacy-wrap p, .privacy-wrap ul li {
+    font-size: 1.33rem;
+    margin-bottom: 5px;
+}
+.privacy-wrap ul{
+    list-style: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+}
 /* contact us page css end */
 
 
