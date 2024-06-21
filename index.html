@@ -1,381 +1,337 @@
 <!DOCTYPE html>
 <html lang="fi">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
-    <link rel="icon" href="assets/images/fav-icn.png">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/media.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css" />
+    <link rel="icon" href="assets/images/fav-icn.png" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/media.css" />
     <title>Kotisivu</title>
- 
-    <style>
-         /* cookies css star here */
- #cookies-popup {
-     position: fixed;
-     bottom: 0;
-     left: 0;
-     width: 100%;
-     background-color:#447bc8;
-     color: #fff;
-     padding: 20px 20px;
-     text-align: center;
-     box-shadow: rgb(0 0 0 / 20%) 0px 0px 15px;
-    /* display: none;*/
-}
- #cookies-popup p {
-     margin: 0;
-     color: var(--black);
-     font-size: 1.33rem;
-}
- #cookies-popup button {
-     background-color: #ff7000;
-     color: #fff;
-     border: none;
-     padding: 10px 20px;
-     cursor: pointer;
-     margin-top: 10px;
-     border-radius: 0px;
-     border: 1px solid #ff7000;
-     font-size: 1.33rem;
-}
- #accept-cookies:hover {
-    background: transparent;
-    border-color: #fff;
-    color: #fff;
-    /* border-color: #3486a1; */
-}
-/* cookies css end here */
-    </style>
 
+    <style>
+      /* cookies css star here */
+      #cookies-popup {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #447bc8;
+        color: #fff;
+        padding: 20px 20px;
+        text-align: center;
+        box-shadow: rgb(0 0 0 / 20%) 0px 0px 15px;
+        /* display: none;*/
+      }
+      #cookies-popup p {
+        margin: 0;
+        color: var(--black);
+        font-size: 1.33rem;
+      }
+      #cookies-popup button {
+        background-color: #ff7000;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-top: 10px;
+        border-radius: 0px;
+        border: 1px solid #ff7000;
+        font-size: 1.33rem;
+      }
+      #accept-cookies:hover {
+        background: transparent;
+        border-color: #fff;
+        color: #fff;
+        /* border-color: #3486a1; */
+      }
+      /* cookies css end here */
+    </style>
   </head>
   <body>
-
-   <header>
-    <div class="container">
+    <header>
+      <div class="container">
         <nav>
-            <div class="site-logo">
-              <a href="index.html">
-                <img src="assets/images/logo.png" alt="">
-              </a>
+          <div class="site-logo">
+            <a href="index.html">
+              <img src="assets/images/logo.png" alt="" />
+            </a>
+          </div>
+          <div class="main-nav">
+            <ul>
+              <li>
+                <a href="luxury.html">Luksushotellit</a>
+              </li>
+              <li>
+                <a href="5-star.html">5 tähteä</a>
+              </li>
+              <li>
+                <a href="casino.html">Kasino hotellit</a>
+              </li>
+              <li>
+                <a href="alternative.html">Vaihtoehtoinen</a>
+              </li>
+              <li>
+                <a href="bidding.html">Tarjoukset</a>
+              </li>
+            </ul>
+            <div class="close">
+              <i class="fa-solid fa-x"></i>
             </div>
-            <div class="main-nav">
-              <ul>
-                <li>
-                  <a href="luxury.html">Luksushotellit</a>
-                </li>
-                <li>
-                  <a href="5-star.html">5 tähteä</a>
-                </li>
-                <li>
-                  <a href="casino.html">Kasino hotellit</a>
-                </li>
-                <li>
-                  <a href="alternative.html">Vaihtoehtoinen</a>
-                </li>
-                <li>
-                  <a href="bidding.html">Tarjoukset</a>
-                </li>
-              </ul>
-              <div class="close">
-                <i class="fa-solid fa-x"></i>
-              </div>
-            </div>
-            <div class="toggle">
-              <i class="fa-solid fa-bars"></i>
-            </div>
+          </div>
+          <div class="toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
         </nav>
-    </div>
-   </header>
+      </div>
+    </header>
 
-   <div class="seach-bar">
-    <div class="container">
+    <div class="seach-bar">
+      <div class="container">
         <form id="booking-form">
-
-        <div class="form-wrap">
+          <div class="form-wrap">
             <div class="form-group first-group">
               <label>Where are you heading to?</label>
-              <input type="text" placeholder="Destination or Hotel name">
+              <input type="text" placeholder="Destination or Hotel name" />
             </div>
             <div class="form-group sec-group">
-              <label>
-                Check in
-              </label>
-              <input type="date" id="check-in">
+              <label> Check in </label>
+              <input type="date" id="check-in" />
             </div>
             <div class="form-group sec-group">
-              <label>
-                Check out
-              </label>
-              <input type="date" id="check-out" >
+              <label> Check out </label>
+              <input type="date" id="check-out" />
             </div>
             <div class="form-group last-group">
-              <label>
-                Nights
-              </label>
-              <input type="text" placeholder="1">
+              <label> Nights </label>
+              <input type="text" placeholder="1" />
             </div>
             <div class="form-group last-group">
-              <label >
-                Adults
-              </label>
-              <input type="number" id="adults" placeholder="1">
+              <label> Adults </label>
+              <input type="number" id="adults" placeholder="1" />
             </div>
             <div class="search-btn">
-              <button> Search</button>
+              <button>Search</button>
             </div>
-        </div>
-
-
-        </form>
-    </div>
-   </div>
-
-
-   <div class="site-banner">
-     <div class="container">
-          <div class="banner-wrap">
-             <div class="banner-text">
-              <h1>
-                 Maailman kaunein on tietysti maailma itse.
-              </h1>
-              <p>
-                Wallace Stevens
-                Kaikki mitä sinun tulee tietää Suomen hotellivertailu sivustosta
-              </p>
-             </div>
           </div>
-     </div>
-   </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="site-banner">
+      <div class="container">
+        <div class="banner-wrap">
+          <div class="banner-text">
+            <h1>Maailman kaunein on tietysti maailma itse.</h1>
+            <p>
+              Wallace Stevens Kaikki mitä sinun tulee tietää Suomen
+              hotellivertailu sivustosta
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="top-sec ptb-50" data-aos="fade-up">
       <div class="container">
         <div class="top-wrap">
-
           <div class="top-text">
             <p>
-              Varmavetossa vertailemme Suomen hotelleja. Annamme sinulle hieman mielenrauhaa, kun valitset
-              täydellisen hotellin sinulle ja perheellesi nopeasti ja helposti.
-              Tältä sivulta löydät kaiken Suomen hotelleista.
+              Varmavetossa vertailemme Suomen hotelleja. Annamme sinulle hieman
+              mielenrauhaa, kun valitset täydellisen hotellin sinulle ja
+              perheellesi nopeasti ja helposti. Tältä sivulta löydät kaiken
+              Suomen hotelleista.
             </p>
           </div>
-          
+
           <div class="top-listing">
             <ul>
-              <li>
-                Tutustu superylellisten hotellien luetteloomme
-              </li>
-              <li>
-                Tutustu 5 tähden hotellivalikoimaamme.
-              </li>
+              <li>Tutustu superylellisten hotellien luetteloomme</li>
+              <li>Tutustu 5 tähden hotellivalikoimaamme.</li>
               <li>
                 Täytä itsesi adrenaliinilla ja valitse hotelli, jossa on kasino
               </li>
-              <li>
-                Yövy ainutlaatuisessa ja vaihtoehtoisessa hotellissa,
-              </li>
-              <li>
-                Hanki parhaat tarjouksemme.
-              </li>
+              <li>Yövy ainutlaatuisessa ja vaihtoehtoisessa hotellissa,</li>
+              <li>Hanki parhaat tarjouksemme.</li>
               <li>
                 Hyödynnä omistautunutta ja ystävällistä asiakaspalveluamme
               </li>
             </ul>
           </div>
-
-
         </div>
-
       </div>
     </div>
 
     <div class="main-card pb-50">
-       <div class="container">
-          <div class="row">
-            <div class="col-md-6" data-aos="fade-up">
-              <div class="main-box" style="background-image: url(./assets/images/main-card1.jpg);">
-                 <a href="luxury.html">
-                  <div class="main-text">
-                    <h3>
-                      Luksus
-                    </h3>
-                  </div>
-                 </a>
-              </div>
-            </div>
-            <div class="col-md-6" data-aos="fade-up">
-              <div class="main-box" style="background-image: url(./assets/images/main-card2.webp);">
-                 <a href="5-star.html">
-                  <div class="main-text">
-                    <h3>
-                      5 tähden hotellit
-                    </h3>
-                  </div>
-                 </a>
-              </div>
-            </div>
-            <div class="col-md-6" data-aos="fade-up">
-              <div class="main-box" style="background-image: url(./assets/images/main-card3.jpg);">
-                 <a href="casino.html">
-                  <div class="main-text">
-                    <h3>
-                      Kasino Hotellit
-                    </h3>
-                  </div>
-                 </a>
-              </div>
-            </div>
-            <div class="col-md-6" data-aos="fade-up">
-              <div class="main-box" style="background-image: url(./assets/images/main-card4.webp);">
-                 <a href="alternative.html">
-                  <div class="main-text">
-                    <h3>
-                      Vaihtoehtoisia hotelleja
-                    </h3>
-                  </div>
-                 </a>
-              </div>
-            </div>
-            <div class="col-md-12" data-aos="fade-up">
-              <div class="main-box" style="background-image: url(./assets/images/main-card5.jpg);">
-                 <a href="bidding.html">
-                  <div class="main-text">
-                    <h3>
-                      Tarjoukset
-                    </h3>
-                  </div>
-                 </a>
-              </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6" data-aos="fade-up">
+            <div
+              class="main-box"
+              style="background-image: url(./assets/images/main-card1.jpg)"
+            >
+              <a href="luxury.html">
+                <div class="main-text">
+                  <h3>Luksus</h3>
+                </div>
+              </a>
             </div>
           </div>
-       </div>
+          <div class="col-md-6" data-aos="fade-up">
+            <div
+              class="main-box"
+              style="background-image: url(./assets/images/main-card2.webp)"
+            >
+              <a href="5-star.html">
+                <div class="main-text">
+                  <h3>5 tähden hotellit</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-up">
+            <div
+              class="main-box"
+              style="background-image: url(./assets/images/main-card3.jpg)"
+            >
+              <a href="casino.html">
+                <div class="main-text">
+                  <h3>Kasino Hotellit</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-up">
+            <div
+              class="main-box"
+              style="background-image: url(./assets/images/main-card4.webp)"
+            >
+              <a href="alternative.html">
+                <div class="main-text">
+                  <h3>Vaihtoehtoisia hotelleja</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-12" data-aos="fade-up">
+            <div
+              class="main-box"
+              style="background-image: url(./assets/images/main-card5.jpg)"
+            >
+              <a href="bidding.html">
+                <div class="main-text">
+                  <h3>Tarjoukset</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-        <!-- cookies section start here -->
-        <div id="cookies-popup">
-          <p> Käytämme evästeitä parantaaksemme surffauskokemustasi. Nämä ovat pieniä tekstitiedostoja,
-            joita säilytetään järjestelmässäsi. Hyväksyt evästeiden käytön, jos jatkat verkkosivustomme
-            käyttöä. Voit muokata evästevalintojasi selaimesi asetuksissa. Napsauta tätä nähdäksesi
-            tietosuojakäytäntömme saadaksesi lisätietoja.
-          </p>
-          <button id="accept-cookies">Hyväksyä</button>
-         
-       </div>
-       <!-- cookies section end here -->
+    <!-- cookies section start here -->
+    <div id="cookies-popup">
+      <p>
+        Käytämme evästeitä parantaaksemme surffauskokemustasi. Nämä ovat pieniä
+        tekstitiedostoja, joita säilytetään järjestelmässäsi. Hyväksyt
+        evästeiden käytön, jos jatkat verkkosivustomme käyttöä. Voit muokata
+        evästevalintojasi selaimesi asetuksissa. Napsauta tätä nähdäksesi
+        tietosuojakäytäntömme saadaksesi lisätietoja.
+      </p>
+      <button id="accept-cookies">Hyväksyä</button>
+    </div>
+    <!-- cookies section end here -->
 
     <footer class="site-footer ptb-50">
       <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-               <div class="footer-wrap">
-                <div class="footer-logo">
-                  <a href="index.html">
-                     <img src="assets/images/logo.png" alt="">
-                  </a>
-                 </div>
-                 <div class="social-links">
-                    <ul>
-                      <li>
-                        <a href="#">
-                          <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa-brands fa-instagram"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa-brands fa-x-twitter"></i>
-                        </a>
-                      </li>
-                    </ul>
-                 </div>
-               </div>
-            </div>
-            <div class="col-md-4">
-              <div class="footer-wrap">
-               <div class="footer-heading">
-                <h3>
-                    Valikko
-                </h3>
-               </div>
-                <div class="footer-links">
-                    <ul>
-                      <li>
-                        <a href="index.html">
-                          Kotisivu
-                        </a>
-                      </li>
-                      <li>
-                        <a href="luxury.html">
-                          Luksushotellit
-                        </a>
-                      </li>
-                      <li>
-                        <a href="5-star.html">
-                          5 tähteä
-                        </a>
-                      </li>
-                      <li>
-                        <a href="casino.html">
-                          Kasino hotellit
-                        </a>
-                      </li>
-                      <li>
-                        <a href="alternative.html">
-                          Vaihtoehtoinen
-                        </a>
-                      </li>
-                      <li>
-                        <a href="bidding.html">
-                          Tarjoukset
-                        </a>
-                      </li>
-                    </ul>
-                </div>
-              </div>
-           </div>
-           <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-4">
             <div class="footer-wrap">
-             <div class="footer-heading">
-              <h3>
-                  Tuki
-              </h3>
-             </div>
-              <div class="footer-links">
-                  <ul>
-                    <li>
-                      <a href="contact-us.html">
-                        Ota meihin yhteyttä
-                      </a>
-                    </li>
-                    <li>
-                      <a href="privacy-policy.html">
-                        Tietosuojakäytäntö
-                      </a>
-                    </li>
-                    <li>
-                      <a href="term-and-condition.html">
-                        Käyttöehdot
-                      </a>
-                    </li>
-                    
-                  </ul>
+              <div class="footer-logo">
+                <a href="index.html">
+                  <img src="assets/images/logo.png" alt="" />
+                </a>
+              </div>
+              <div class="social-links">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-brands fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
-         </div>
           </div>
-          <div class="copy-right">
-            <p>
-             © Copyright 2024 , varmaveto.com All Rights Reserved.
-            </p>
-         </div>
+          <div class="col-md-4">
+            <div class="footer-wrap">
+              <div class="footer-heading">
+                <h3>Valikko</h3>
+              </div>
+              <div class="footer-links">
+                <ul>
+                  <li>
+                    <a href="index.html"> Kotisivu </a>
+                  </li>
+                  <li>
+                    <a href="luxury.html"> Luksushotellit </a>
+                  </li>
+                  <li>
+                    <a href="5-star.html"> 5 tähteä </a>
+                  </li>
+                  <li>
+                    <a href="casino.html"> Kasino hotellit </a>
+                  </li>
+                  <li>
+                    <a href="alternative.html"> Vaihtoehtoinen </a>
+                  </li>
+                  <li>
+                    <a href="bidding.html"> Tarjoukset </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="footer-wrap">
+              <div class="footer-heading">
+                <h3>Tuki</h3>
+              </div>
+              <div class="footer-links">
+                <ul>
+                  <li>
+                    <a href="contact-us.html"> Ota meihin yhteyttä </a>
+                  </li>
+                  <li>
+                    <a href="privacy-policy.html"> Tietosuojakäytäntö </a>
+                  </li>
+                  <li>
+                    <a href="term-and-condition.html"> Käyttöehdot </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copy-right">
+          <p>© Copyright 2024 , varmaveto.com All Rights Reserved.</p>
+        </div>
       </div>
-     
     </footer>
 
     <script src="assets/js/jquery-3.7.1.min.js"></script>
@@ -384,17 +340,15 @@
     <script src="assets/js/custom.js"></script>
 
     <script>
-        
-      document.addEventListener("DOMContentLoaded", function() {
+      document.addEventListener("DOMContentLoaded", function () {
         var acceptCookiesBtn = document.getElementById("accept-cookies");
         var cookiesPopup = document.getElementById("cookies-popup");
-      
-        acceptCookiesBtn.addEventListener("click", function() {
-            cookiesPopup.style.display = "none";
-            // You can add code here to set a cookie to remember the user's choice
+
+        acceptCookiesBtn.addEventListener("click", function () {
+          cookiesPopup.style.display = "none";
+          // You can add code here to set a cookie to remember the user's choice
         });
       });
-          </script>
-
+    </script>
   </body>
 </html>
